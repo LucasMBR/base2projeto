@@ -98,8 +98,11 @@ public class PageBase {
     protected void comboBoxSelectByVisibleText(By locator, String text){
         Select comboBox = new Select(waitForElement(locator));
         comboBox.selectByVisibleText(text);
-        //Adicionei manualmente.
-        //comboBox.selectByValue(text);
+    }
+    //Adicionei na intenção de usar valor não visível.
+    protected void comboBoxSelectByValue(By locator, String text){
+        Select comboBox = new Select(waitForElement(locator));
+        comboBox.selectByValue(text);
     }
 
     protected String getText(By locator){

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static org.openqa.selenium.By.*;
 
-public class cadastroOcorrenciasPage extends PageBase {
+public class CadastroOcorrenciasPage extends PageBase {
     By relatarCaso = linkText("Relatar Caso");
 
     By categoriaCombobox = name("category_id");
@@ -18,20 +18,23 @@ public class cadastroOcorrenciasPage extends PageBase {
 
     By enviarRelatorioBtn = xpath("//*[@value='Enviar Relatório']");
 
+    By mensagemSucessoEsperada = xpath("//div[@align='center']");
+
+
     public void relatarCasoBtn(){
         click(relatarCaso);
     }
 
     public void categoriaComboboxSelect(String primeiroValor){
-        comboBoxSelectByVisibleText(categoriaCombobox, primeiroValor);
+        comboBoxSelectByValue(categoriaCombobox, primeiroValor);
     }
 
     public void frequenciaComboboxSelect(String segundoValor){
-        comboBoxSelectByVisibleText(frequenciaCombobox, segundoValor);
+        comboBoxSelectByValue(frequenciaCombobox, segundoValor);
     }
 
     public void gravidadeComboboxSelect(String terceiroValor){
-        comboBoxSelectByVisibleText(gravidadeCombobox, terceiroValor);
+        comboBoxSelectByValue(gravidadeCombobox, terceiroValor);
     }
 
     public void campoResumo(String resumo){
@@ -49,4 +52,10 @@ public class cadastroOcorrenciasPage extends PageBase {
     public void enviarRelatorio(){
         click(enviarRelatorioBtn);
     }
+
+    public String mensagemSucesso(){
+        String text = getText(this.mensagemSucessoEsperada).substring(0,31);
+        return text;
+    }
+
 }
