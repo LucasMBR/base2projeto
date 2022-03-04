@@ -3,7 +3,7 @@ package com.javaseleniumtemplate.flows;
 import com.javaseleniumtemplate.pages.LoginPage;
 
 public class LoginFlows {
-    //Objects and constructor
+    //Objetos e contrutor
     LoginPage loginPage;
 
     public LoginFlows(){
