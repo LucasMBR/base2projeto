@@ -44,6 +44,12 @@ public class PageBase {
         return element;
     }
 
+    //Acrescentei para pegar o código fonte de algumas páginas rápidas.
+
+    public void getPageSource(){
+        System.out.println(driver.getPageSource());
+    }
+
     protected void click(By locator){
         WebDriverException possibleWebDriverException = null;
         StopWatch timeOut = new StopWatch();

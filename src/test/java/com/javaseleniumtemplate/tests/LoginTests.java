@@ -20,7 +20,6 @@ public class LoginTests extends TestBase {
         //Parameteres
         String usuario = "lucas.leal";
         String senha = "21DEZ96lsl.";
-        String loginSucessMessage;
 
         //Test
         loginPage.preencherUsuario(usuario);

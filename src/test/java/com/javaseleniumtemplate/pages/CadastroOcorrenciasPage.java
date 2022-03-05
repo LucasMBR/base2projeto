@@ -54,7 +54,7 @@ public class CadastroOcorrenciasPage extends PageBase {
     }
 
     public String mensagemSucesso(){
-        String text = getText(this.mensagemSucessoEsperada).substring(0,31);
+        String text = getText(mensagemSucessoEsperada).substring(0,31);
         return text;
     }
 

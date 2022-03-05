@@ -11,7 +11,7 @@ public class CadastroOcorrenciasFlows {
     }
 
     //Flows
-    public void CadastrarOcorrencia(String categoriaComboBox,String frequenciaCombobox,
+    public void CadastrarOcorrenciaCompleta(String categoriaComboBox,String frequenciaCombobox,
                                     String gravidadeComboBox,String resumo, String descricao,
                                     String etapas){
         cadastroOcorrenciasPage.relatarCasoBtn();
@@ -21,6 +21,15 @@ public class CadastroOcorrenciasFlows {
         cadastroOcorrenciasPage.campoResumo(resumo);
         cadastroOcorrenciasPage.campoDescricao(descricao);
         cadastroOcorrenciasPage.campoEtapas(etapas);
+        cadastroOcorrenciasPage.enviarRelatorio();
+        cadastroOcorrenciasPage.mensagemSucesso();
+    }
+    //Sobrecarga
+    public void CadastrarOcorrenciaSimples(String categoriaComboBox,String resumo, String descricao){
+        cadastroOcorrenciasPage.relatarCasoBtn();
+        cadastroOcorrenciasPage.categoriaComboboxSelect(categoriaComboBox);
+        cadastroOcorrenciasPage.campoResumo(resumo);
+        cadastroOcorrenciasPage.campoDescricao(descricao);
         cadastroOcorrenciasPage.enviarRelatorio();
         cadastroOcorrenciasPage.mensagemSucesso();
     }
