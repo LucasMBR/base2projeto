@@ -1,21 +1,42 @@
 package com.javaseleniumtemplate.pages;
 
+import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
 
-import static org.openqa.selenium.By.xpath;
+import static org.openqa.selenium.By.*;
 
 public class EnviarLembretePage extends PageBase {
 
-    By nomeDestinatario = By.xpath("//option[@value='342']");
-    By visualizarCasoEnviado = xpath("//div[@align='center']");
+    By visualizarCasoEnviado = xpath("//a[contains(text(),'Visualizar Caso Enviado')]");//Contém texto parcial do link.
+    By enviarLembrete = xpath("//a[.='Enviar um lembrete']");//Contém o texto exato do link.
+    By destinatarioLembrete = xpath ("//*[@multiple='multiple']//*[.='"+GlobalParameters.USUARIO_GERAL+"']");
+    By campoLembrete = xpath("//textarea[@name='body']");
+    By enviarLembreteButton = By.xpath("//*[@class='button']");
 
-    /*Estratégia de encotrar parte do texto para depois clicar não deu certo.
+    By mensagemSucessoEsperada = xpath("//div[@align='center']");
 
-    public String visualizarCasoEnviadoLink(){
+    public void visualizarCasoEnviadoLink(){
+        click(visualizarCasoEnviado);
+    }
 
-        String text = getText(visualizarCasoEnviado).substring(34,56);
-        return text;
-    }*/
+    public void enviarLembreteLink(){
+        click(enviarLembrete);
+    }
+
+    public void selecionarDestinatarioLembrete(){
+        click(destinatarioLembrete);
+    }
+
+    public void descricaoLembrete(String lembrete){
+        sendKeys(campoLembrete, lembrete);
+    }
+    public void enviarLembreteBtn(){
+        click(enviarLembreteButton);
+    }
+
+    public String mensagemSucesso(){
+        return getText(mensagemSucessoEsperada).substring(0,31);
+    }
 
 }

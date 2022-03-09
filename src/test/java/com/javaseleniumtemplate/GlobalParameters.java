@@ -13,6 +13,15 @@ public class GlobalParameters {
     public static String URL_DEFAULT;
     public static String DOWNLOAD_DEFAULT_PATH;
     public static String SENHA_GERAL;
+    public static String USUARIO_GERAL;
+    public static String RESUMO_GERAL;
+    public static String DESCRICAO_GERAL;
+    public static String ETAPAS_GERAL;
+    public static String MENSAGEM_SUCESSO;
+    public static String LEMBRETE_GERAL;
+    public static String CATEGORIA_GERAL;
+    public static String FREQUENCIA_GERAL;
+    public static String GRAVIDADE_GERAL;
 
     private Properties properties;
 
@@ -35,5 +44,14 @@ public class GlobalParameters {
         URL_DEFAULT = properties.getProperty("url.default");
         DOWNLOAD_DEFAULT_PATH = properties.getProperty("download.defaul.path");
         SENHA_GERAL = properties.getProperty("senhaGeral");
+        USUARIO_GERAL = properties.getProperty("usuario");
+        RESUMO_GERAL = properties.getProperty("resumoTeste");
+        DESCRICAO_GERAL = properties.getProperty("descricaoTeste");
+        ETAPAS_GERAL = properties.getProperty("etapasTeste");
+        MENSAGEM_SUCESSO = properties.getProperty("mensagemSucessoEsperada");
+        LEMBRETE_GERAL = properties.getProperty("lembrete");
+        CATEGORIA_GERAL = properties.getProperty("categoriaComboBox");
+        FREQUENCIA_GERAL = properties.getProperty("frequenciaComboBox");
+        GRAVIDADE_GERAL = properties.getProperty("gravidadeComboBox");
     }
 }

@@ -1,5 +1,6 @@
 package com.javaseleniumtemplate.flows;
 
+import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.pages.LoginPage;
 
 public class LoginFlows {
@@ -12,9 +13,9 @@ public class LoginFlows {
     }
 
     //Flows
-    public void efetuarLogin(String usuario, String senha){
-        loginPage.preencherUsuario(usuario);
-        loginPage.preencherSenha(senha);
+    public void efetuarLogin(){
+        loginPage.preencherUsuario();
+        loginPage.preencherSenha();
         loginPage.clicarEmLogin();
         loginPage.loginSucessMessage();
     }

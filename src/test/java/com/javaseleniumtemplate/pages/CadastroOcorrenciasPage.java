@@ -1,5 +1,6 @@
 package com.javaseleniumtemplate.pages;
 
+import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
 
@@ -25,28 +26,28 @@ public class CadastroOcorrenciasPage extends PageBase {
         click(relatarCaso);
     }
 
-    public void categoriaComboboxSelect(String primeiroValor){
-        comboBoxSelectByValue(categoriaCombobox, primeiroValor);
+    public void categoriaComboboxSelect(){
+        comboBoxSelectByValue(categoriaCombobox, GlobalParameters.CATEGORIA_GERAL);
     }
 
-    public void frequenciaComboboxSelect(String segundoValor){
-        comboBoxSelectByValue(frequenciaCombobox, segundoValor);
+    public void frequenciaComboboxSelect(){
+        comboBoxSelectByValue(frequenciaCombobox, GlobalParameters.FREQUENCIA_GERAL);
     }
 
-    public void gravidadeComboboxSelect(String terceiroValor){
-        comboBoxSelectByValue(gravidadeCombobox, terceiroValor);
+    public void gravidadeComboboxSelect(){
+        comboBoxSelectByValue(gravidadeCombobox, GlobalParameters.GRAVIDADE_GERAL);
     }
 
-    public void campoResumo(String resumo){
-        sendKeys(resumoField, resumo);
+    public void campoResumo(){
+        sendKeys(resumoField, GlobalParameters.RESUMO_GERAL);
     }
 
-    public void campoDescricao(String descricao){
-        sendKeys(descricaoField, descricao);
+    public void campoDescricao(){
+        sendKeys(descricaoField, GlobalParameters.DESCRICAO_GERAL);
     }
 
-    public void campoEtapas(String etapas){
-        sendKeys(stepsField, etapas);
+    public void campoEtapas(){
+        sendKeys(stepsField, GlobalParameters.ETAPAS_GERAL);
     }
 
     public void enviarRelatorio(){
