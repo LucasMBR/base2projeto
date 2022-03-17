@@ -22,6 +22,19 @@ public class GlobalParameters {
     public static String CATEGORIA_GERAL;
     public static String FREQUENCIA_GERAL;
     public static String GRAVIDADE_GERAL;
+    public static String PROJETO_PADRAO;
+    public static String TEMPO_RENOVACAO_PADRAO;
+    public static String TEMPO_REDIRECIONAMENTO_PADRAO;
+    public static String NOVOS_CASOS;
+    public static String MUDANCAS_ATRI;
+    public static String RETORNOS;
+    public static String CASOS_RESO;
+    public static String CASOS_FECH;
+    public static String CASOS_REAB;
+    public static String ANOTACOES;
+    public static String MUD_STATUS;
+    public static String MUD_PRIORI;
+    public static String LIMITE_ANOT_EMAIL;
 
     private Properties properties;
 
@@ -53,5 +66,20 @@ public class GlobalParameters {
         CATEGORIA_GERAL = properties.getProperty("categoriaComboBox");
         FREQUENCIA_GERAL = properties.getProperty("frequenciaComboBox");
         GRAVIDADE_GERAL = properties.getProperty("gravidadeComboBox");
+        PROJETO_PADRAO = properties.getProperty("projetoPadraoCombobox");
+        TEMPO_RENOVACAO_PADRAO = properties.getProperty("tempoRenovacaoPref");
+        TEMPO_REDIRECIONAMENTO_PADRAO = properties.getProperty("tempoRedirecionamentoPref");
+        NOVOS_CASOS = properties.getProperty("comboboxNovosCasos");
+        MUDANCAS_ATRI = properties.getProperty("comboboxMudancaAtri");
+        RETORNOS = properties.getProperty("comboboxRetornos");
+        CASOS_RESO = properties.getProperty("comboboxCasosReso");
+        CASOS_FECH = properties.getProperty("comboboxCasosFech");
+        CASOS_REAB = properties.getProperty("comboboxCasosReab");
+        ANOTACOES = properties.getProperty("comboboxAnotacoes");
+        MUD_STATUS = properties.getProperty("comboboxMudStatus");
+        MUD_PRIORI = properties.getProperty("comboboxMudPriori");
+        LIMITE_ANOT_EMAIL = properties.getProperty("anotacoesEmail");
+
+
     }
 }

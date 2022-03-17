@@ -94,6 +94,9 @@ public class PageBase {
     protected void sendKeys(By locator, String text){
         waitForElement(locator).sendKeys(text);
     }
+    protected void clear(By locator){
+        waitForElement(locator).clear();
+    }
 
     protected void sendKeysWithoutWaitVisible(By locator, String text){
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
