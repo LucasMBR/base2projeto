@@ -1,8 +1,6 @@
 package com.javaseleniumtemplate.tests;
 
-import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.TestBase;
-import com.javaseleniumtemplate.flows.LoginFlows;
 import com.javaseleniumtemplate.pages.LoginPage;
 import org.junit.Assert;
 import org.junit.Test;

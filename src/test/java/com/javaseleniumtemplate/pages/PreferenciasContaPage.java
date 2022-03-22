@@ -46,10 +46,12 @@ public class PreferenciasContaPage extends PageBase {
     By comboboxMudPriori = xpath("//*[@name='email_on_priority_min_severity']");
 
     By limiteAnotacoesEmail = xpath("//*[@name='email_bugnote_limit']");
-    By fusoHorarioSelecao = xpath("//*[@value='America/Sao_Paulo']");
-    By idiomaSelecao = xpath("//*[@value='portuguese_brazil']");
+    By fusoHorarioSelecao = xpath("//*[@name='timezone']"); ////*[@label='America']/option[@value='America/Sao_Paulo']
+    By idiomaSelecao = xpath("//*[@name='language']");////*[@value='portuguese_brazil']
 
     By atualizaPreferenciasBtn = xpath("//*[@value='Atualizar Preferências']");
+
+    By alteracoesRealizadasSucesso = xpath("//div[@align='center']");
 
     public void minhaContaBtn(){
         click(minhaConta);
@@ -139,10 +141,16 @@ public class PreferenciasContaPage extends PageBase {
         sendKeys(limiteAnotacoesEmail, GlobalParameters.LIMITE_ANOT_EMAIL);
     }
     public void fusoHoraSelecao(){
-
+        comboBoxSelectByValue(fusoHorarioSelecao,GlobalParameters.FUSO_HORARIO);
     }
-    public void IdiomaSelecao(){
-
+    public void idiomaSelecao(){
+        comboBoxSelectByValue(idiomaSelecao,GlobalParameters.IDIOMA_SELECIONADO);
+    }
+    public void atualizarPreferencias(){
+        click(atualizaPreferenciasBtn);
+    }
+    public String confirmacaoSucesso(){
+        return getText(alteracoesRealizadasSucesso).substring(0,31);
     }
 
 }

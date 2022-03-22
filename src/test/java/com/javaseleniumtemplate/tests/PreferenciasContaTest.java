@@ -1,9 +1,12 @@
 package com.javaseleniumtemplate.tests;
 
+import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.TestBase;
 import com.javaseleniumtemplate.flows.LoginFlows;
 import com.javaseleniumtemplate.pages.PreferenciasContaPage;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class PreferenciasContaTest extends TestBase {
 
@@ -54,7 +57,12 @@ public class PreferenciasContaTest extends TestBase {
         preferenciasContaPage.comboboxMudPriori();
 
         preferenciasContaPage.limiteAnotEmail();
+        preferenciasContaPage.fusoHoraSelecao();
+        preferenciasContaPage.idiomaSelecao();
 
+        preferenciasContaPage.atualizarPreferencias();
+
+        assertEquals(preferenciasContaPage.confirmacaoSucesso(), GlobalParameters.MENSAGEM_SUCESSO);
 
     }
 

@@ -35,18 +35,17 @@ public class GlobalParameters {
     public static String MUD_STATUS;
     public static String MUD_PRIORI;
     public static String LIMITE_ANOT_EMAIL;
-
-    private Properties properties;
+    public static String FUSO_HORARIO;
+    public static String IDIOMA_SELECIONADO;
+    public static String ESCOLHER_PROJETO;
 
     public GlobalParameters(){
-        properties = new Properties();
+        Properties properties = new Properties();
         InputStream input = null;
 
         try {
             input = new FileInputStream("globalParameters.properties");
             properties.load(input);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -79,7 +78,9 @@ public class GlobalParameters {
         MUD_STATUS = properties.getProperty("comboboxMudStatus");
         MUD_PRIORI = properties.getProperty("comboboxMudPriori");
         LIMITE_ANOT_EMAIL = properties.getProperty("anotacoesEmail");
-
+        FUSO_HORARIO = properties.getProperty("fusoHorario");
+        IDIOMA_SELECIONADO = properties.getProperty("idioma");
+        ESCOLHER_PROJETO = properties.getProperty("escolherProjeto");
 
     }
 }
