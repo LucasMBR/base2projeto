@@ -61,9 +61,9 @@ public class PreferenciasContaPage extends PageBase {
         click(preferenciasConta);
     }
 
-    public void redefinirPreferenciasBtn(){
+    /*public void redefinirPreferenciasBtn(){
         click(redefinirPreferencia);
-    }
+    }*/
 
     public void projetoComboboxSelect(){
         comboBoxSelectByValue(projetoCombobox, GlobalParameters.PROJETO_PADRAO);
@@ -76,9 +76,9 @@ public class PreferenciasContaPage extends PageBase {
         clear(tempoRedirecionamentoSegundos);
         sendKeys(tempoRedirecionamentoSegundos, GlobalParameters.TEMPO_REDIRECIONAMENTO_PADRAO);
     }
-    public void clicarRadioBtnAsc(){
+    /*public void clicarRadioBtnAsc(){
         click(radioButtonAsc);
-    }
+    }*/
     public void clicarRadioDesc(){
         click(radioButtonDesc);
     }

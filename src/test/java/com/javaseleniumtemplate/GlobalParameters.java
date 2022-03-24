@@ -38,6 +38,8 @@ public class GlobalParameters {
     public static String FUSO_HORARIO;
     public static String IDIOMA_SELECIONADO;
     public static String ESCOLHER_PROJETO;
+    public static String VERSAO_MANTIS_ATUAL;
+    public static String VERSAO_SCHEMA_ATUAL;
 
     public GlobalParameters(){
         Properties properties = new Properties();
@@ -81,6 +83,8 @@ public class GlobalParameters {
         FUSO_HORARIO = properties.getProperty("fusoHorario");
         IDIOMA_SELECIONADO = properties.getProperty("idioma");
         ESCOLHER_PROJETO = properties.getProperty("escolherProjeto");
+        VERSAO_MANTIS_ATUAL = properties.getProperty("versaoMantis");
+        VERSAO_SCHEMA_ATUAL = properties.getProperty("versaoSchema");
 
     }
 }
