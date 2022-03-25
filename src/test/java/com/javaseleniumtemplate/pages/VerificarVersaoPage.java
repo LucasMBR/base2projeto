@@ -18,8 +18,8 @@ public class VerificarVersaoPage extends PageBase {
                 click(gerenciarBtn);
         }
 
-        public void informacoesSiteCampos(){
-                getText(informacoesSiteCampos).
+        public String informacoesSiteCamposDisplayed(){
+                return getText(informacoesSiteCampos);
         }
 
         public String versaoMantisCheck(){

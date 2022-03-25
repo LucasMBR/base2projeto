@@ -40,6 +40,8 @@ public class GlobalParameters {
     public static String ESCOLHER_PROJETO;
     public static String VERSAO_MANTIS_ATUAL;
     public static String VERSAO_SCHEMA_ATUAL;
+    public static String CAMPOS_VERSOES;
+    public static String LOGIN_SUCESS;
 
     public GlobalParameters(){
         Properties properties = new Properties();
@@ -85,6 +87,8 @@ public class GlobalParameters {
         ESCOLHER_PROJETO = properties.getProperty("escolherProjeto");
         VERSAO_MANTIS_ATUAL = properties.getProperty("versaoMantis");
         VERSAO_SCHEMA_ATUAL = properties.getProperty("versaoSchema");
+        CAMPOS_VERSOES = properties.getProperty("camposVersoes");
+        LOGIN_SUCESS = properties.getProperty("loginSucessMsg");
 
     }
 }

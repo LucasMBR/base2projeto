@@ -1,0 +1,6 @@
+Verificar como acrescentar os trechos de código para criar os prints e reports das telas testadas;
+Acrescentar comentários de cada caso de teste;
+Ver possibilidade de explorar mais funções criadas no PageBase;
+Criar mais asserts para cada caso de teste;
+Colocar mensagens de erro nos asserts, exemplo:assertEquals("mensagem de exemplo","locator", valor);
+Modificar mensagens do cadastro de ocorrencia e lembrete;

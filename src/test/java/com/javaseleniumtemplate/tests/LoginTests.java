@@ -1,9 +1,12 @@
 package com.javaseleniumtemplate.tests;
 
+import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.TestBase;
 import com.javaseleniumtemplate.pages.LoginPage;
 import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertTrue;
 
 public class LoginTests extends TestBase {
     //Objects
@@ -21,7 +24,7 @@ public class LoginTests extends TestBase {
         loginPage.preencherSenha();
         loginPage.clicarEmLogin();
 
-        Assert.assertTrue(loginPage.loginSucessMessage());
+        assertTrue(loginPage.loginSucessMessage().equals(GlobalParameters.LOGIN_SUCESS));
     }
 
 }
