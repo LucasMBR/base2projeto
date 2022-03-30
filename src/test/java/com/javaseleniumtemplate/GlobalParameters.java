@@ -42,6 +42,11 @@ public class GlobalParameters {
     public static String VERSAO_SCHEMA_ATUAL;
     public static String CAMPOS_VERSOES;
     public static String LOGIN_SUCESS;
+    public static String REPORT_NAME;
+    public static String REPORT_PATH;
+    public static boolean GET_SCREENSHOT_FOR_EACH_STEP;
+    public static int TIMEOUT_POLLING_DEFAULT;
+
 
     public GlobalParameters(){
         Properties properties = new Properties();
@@ -59,6 +64,8 @@ public class GlobalParameters {
         TIMEOUT_DEFAULT = Integer.parseInt(properties.getProperty("timeout.default"));
         URL_DEFAULT = properties.getProperty("url.default");
         DOWNLOAD_DEFAULT_PATH = properties.getProperty("download.defaul.path");
+        REPORT_NAME = properties.getProperty("report.name");
+        REPORT_PATH = properties.getProperty("report.path");
         SENHA_GERAL = properties.getProperty("senhaGeral");
         USUARIO_GERAL = properties.getProperty("usuario");
         RESUMO_GERAL = properties.getProperty("resumoTeste");
@@ -89,6 +96,8 @@ public class GlobalParameters {
         VERSAO_SCHEMA_ATUAL = properties.getProperty("versaoSchema");
         CAMPOS_VERSOES = properties.getProperty("camposVersoes");
         LOGIN_SUCESS = properties.getProperty("loginSucessMsg");
+        GET_SCREENSHOT_FOR_EACH_STEP = Boolean.parseBoolean(properties.getProperty("get.screenshot.for.each.step"));
+        //TIMEOUT_POLLING_DEFAULT = Integer.parseInt(properties.getProperty("timeout.polling.default"));
 
     }
 }
