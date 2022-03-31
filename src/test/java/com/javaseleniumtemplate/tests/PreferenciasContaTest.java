@@ -4,6 +4,7 @@ import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.TestBase;
 import com.javaseleniumtemplate.flows.LoginFlows;
 import com.javaseleniumtemplate.pages.PreferenciasContaPage;
+import com.javaseleniumtemplate.utils.ExtentReportUtils;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -64,6 +65,8 @@ public class PreferenciasContaTest extends TestBase {
 
         assertEquals(preferenciasContaPage.confirmacaoSucesso(), GlobalParameters.MENSAGEM_SUCESSO);
 
+        ExtentReportUtils.addTest(getClass().getSimpleName(), "method.getDeclaringClass().getSimpleName()");
+        ExtentReportUtils.addTestInfo(2, "Method.class.getMethod().getName()");
     }
 
 }

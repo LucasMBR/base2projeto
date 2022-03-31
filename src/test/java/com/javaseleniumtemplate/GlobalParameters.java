@@ -97,7 +97,7 @@ public class GlobalParameters {
         CAMPOS_VERSOES = properties.getProperty("camposVersoes");
         LOGIN_SUCESS = properties.getProperty("loginSucessMsg");
         GET_SCREENSHOT_FOR_EACH_STEP = Boolean.parseBoolean(properties.getProperty("get.screenshot.for.each.step"));
-        //TIMEOUT_POLLING_DEFAULT = Integer.parseInt(properties.getProperty("timeout.polling.default"));
+        TIMEOUT_POLLING_DEFAULT = Integer.parseInt(properties.getProperty("timeout.polling.default"));
 
     }
 }
