@@ -18,11 +18,10 @@ public class ExtentReportUtils {
     static String fullScreenShotPath = reportsPath + "/"+ reportName +"/";
     private static String testNameMemory = null;
 
-    //Criar arquivo para guardar as informações dos testes que serão realizados.
+    //Cria arquivo para guardar as informações dos testes que serão realizados.
     public static void createReport(){
         if (EXTENT_REPORT == null)
         {
-            //Utils.ensureDirectoryExists(fullReportFilePath);
             HTML_REPORTER = new ExtentHtmlReporter(fullReportFilePath);
             EXTENT_REPORT = new ExtentReports();
             EXTENT_REPORT.attachReporter(HTML_REPORTER);

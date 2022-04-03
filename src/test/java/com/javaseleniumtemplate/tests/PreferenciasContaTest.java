@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class PreferenciasContaTest extends TestBase {
 
+    //Flows foram utilizados devido à repetição de trechos parecidos nos casos de teste.
     PreferenciasContaPage preferenciasContaPage;
     LoginFlows loginFlows;
 
@@ -65,6 +66,7 @@ public class PreferenciasContaTest extends TestBase {
 
         assertEquals(preferenciasContaPage.confirmacaoSucesso(), GlobalParameters.MENSAGEM_SUCESSO);
 
+        //Ver explicação no caso de teste 'LoginTests'
         ExtentReportUtils.addTest(getClass().getSimpleName(), "method.getDeclaringClass().getSimpleName()");
         ExtentReportUtils.addTestInfo(2, "Method.class.getMethod().getName()");
     }

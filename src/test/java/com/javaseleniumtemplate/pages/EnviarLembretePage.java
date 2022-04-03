@@ -3,7 +3,6 @@ package com.javaseleniumtemplate.pages;
 import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
-
 import static org.openqa.selenium.By.*;
 
 public class EnviarLembretePage extends PageBase {

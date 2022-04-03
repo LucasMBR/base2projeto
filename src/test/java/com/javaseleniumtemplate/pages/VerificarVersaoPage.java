@@ -2,7 +2,6 @@ package com.javaseleniumtemplate.pages;
 
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
-
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.xpath;
 

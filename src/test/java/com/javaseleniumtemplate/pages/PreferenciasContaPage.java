@@ -3,19 +3,23 @@ package com.javaseleniumtemplate.pages;
 import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
-
 import static org.openqa.selenium.By.*;
 
 public class PreferenciasContaPage extends PageBase {
 
     By minhaConta = linkText("Minha Conta");
     By preferenciasConta = linkText("Preferências");
-    By redefinirPreferencia = xpath("//*[@value='Redefinir Preferências']");
+
+    //Trecho não esta sendo utilizado, porém mantive pois pode ser utilizado neste teste.
+    //By redefinirPreferencia = xpath("//*[@value='Redefinir Preferências']");
 
     By projetoCombobox = name("default_project");
     By tempoRenovacaoMinutos = xpath("//*[@name='refresh_delay']");
     By tempoRedirecionamentoSegundos = xpath("//*[@name='redirect_delay']");
-    By radioButtonAsc = xpath("//*[@value='ASC']");
+
+    //Trecho não esta sendo utilizado, porém mantive pois pode ser utilizado neste teste.
+    //By radioButtonAsc = xpath("//*[@value='ASC']");
+
     By radioButtonDesc = xpath("//*[@value='DESC']");
 
     By checkBoxNovosCasos = xpath("//*[@name='email_on_new']");
@@ -61,6 +65,7 @@ public class PreferenciasContaPage extends PageBase {
         click(preferenciasConta);
     }
 
+    //Trecho não esta sendo utilizado, porém mantive pois pode ser utilizado neste teste.
     /*public void redefinirPreferenciasBtn(){
         click(redefinirPreferencia);
     }*/
@@ -76,9 +81,12 @@ public class PreferenciasContaPage extends PageBase {
         clear(tempoRedirecionamentoSegundos);
         sendKeys(tempoRedirecionamentoSegundos, GlobalParameters.TEMPO_REDIRECIONAMENTO_PADRAO);
     }
+
+    //Trecho não esta sendo utilizado, porém mantive pois pode ser utilizado neste teste.
     /*public void clicarRadioBtnAsc(){
         click(radioButtonAsc);
     }*/
+
     public void clicarRadioDesc(){
         click(radioButtonDesc);
     }

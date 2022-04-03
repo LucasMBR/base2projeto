@@ -2,13 +2,7 @@ package com.javaseleniumtemplate.pages;
 
 import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.PageBase;
-import com.javaseleniumtemplate.utils.ExtentReportUtils;
-import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.By;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-
-import java.lang.reflect.Method;
 
 public class LoginPage extends PageBase {
 

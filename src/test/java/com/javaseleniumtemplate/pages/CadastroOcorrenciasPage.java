@@ -3,18 +3,16 @@ package com.javaseleniumtemplate.pages;
 import com.javaseleniumtemplate.GlobalParameters;
 import com.javaseleniumtemplate.bases.PageBase;
 import org.openqa.selenium.By;
-
 import static org.openqa.selenium.By.*;
 
 public class CadastroOcorrenciasPage extends PageBase {
     By relatarCaso = linkText("Relatar Caso");
 
-    //Trecho deve ser utilizado só na primeira vez, quando deve selecionar o projeto padrão.
-    //Caso o teste seja realizado uma segunda vez sem limpar cache, não será necessário utilizar o trecho.
+    //Trecho para ser habilitado em caso de primeiro teste. Detalhes sobre o trecho, ver CadastroOcorrenciasTest
+
     /*By escolherProjeto = xpath("//*[@class='width50']//tr[2]//td[2]//select[@name='project_id']");
     By checkBoxTornarPadrao = xpath("//*[@name='make_default']");
     By selecionarProjetoBtn =  xpath("//*[@value='Selecionar Projeto']");*/
-    //Fim do trecho especial.
 
     By categoriaCombobox = name("category_id");
     By frequenciaCombobox = name("reproducibility");
@@ -28,11 +26,12 @@ public class CadastroOcorrenciasPage extends PageBase {
 
     By mensagemSucessoEsperada = xpath("//div[@align='center']");
 
-
     public void relatarCasoBtn(){
         click(relatarCaso);
     }
-    //Parte do trecho especial para primeira execução do teste, caso outras sejam realizadas sem limpar cache.
+
+    //Trecho para ser habilitado em caso de primeiro teste. Detalhes sobre o trecho, ver CadastroOcorrenciasTest
+
     /*public void escolherProjetoSeletor(){
         comboBoxSelectByValue(escolherProjeto, GlobalParameters.ESCOLHER_PROJETO);
     }
